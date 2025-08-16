@@ -1,13 +1,30 @@
+// src/components/Navbar.js
 import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav style={{ padding: "10px", background: "#222", color: "#fff" }}>
-      <Link to="/" style={{ margin: "0 10px", color: "white" }}>首页</Link>
-      <Link to="/launch" style={{ margin: "0 10px", color: "white" }}>发起项目</Link>
-      <Link to="/login" style={{ margin: "0 10px", color: "white" }}>登录</Link>
-      <Link to="/admin" style={{ margin: "0 10px", color: "white" }}>管理员</Link>
+    <nav className="bg-gray-900 text-white p-4 flex justify-between items-center shadow-lg">
+      <div className="text-xl font-bold">
+        人人互助共享明天未来
+      </div>
+      <div className="flex space-x-6">
+        <Link to="/" className="hover:text-yellow-400">
+          首页 / Home
+        </Link>
+        <Link to="/launch" className="hover:text-yellow-400">
+          发起众筹 / Launch
+        </Link>
+        <Link to="/projects" className="hover:text-yellow-400">
+          项目列表 / Projects
+        </Link>
+        <Link to="/ranking" className="hover:text-yellow-400">
+          排行榜 / Ranking
+        </Link>
+        <Link to="/admin" className="hover:text-yellow-400">
+          管理员审核 / Admin
+        </Link>
+      </div>
     </nav>
   );
 }
